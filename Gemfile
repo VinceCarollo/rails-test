@@ -8,4 +8,6 @@ group :test, :development do
   gem 'rspec-rails'
   gem 'guard-rails'
   gem 'guard-rspec'
+  gem 'capybara'
+  gem 'launchy'
 end
