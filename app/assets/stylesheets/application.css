@@ -26,11 +26,19 @@ tbody tr td {
   color: #3E92CC;
 }
 
+.form-group {
+  width: 300px;
+}
+
+.form-label {
+  font-size: 15px;
+}
+
 #list-table {
   margin-top: 20px;
 }
 
-#new-list-btn {
+#new-list-btn, #edit-list-btn {
   height: 40px;
   width: 200px;
   font-size: 20px;

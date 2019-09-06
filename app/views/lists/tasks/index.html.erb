@@ -1,25 +1,30 @@
 <h1>List Tasks</h1>
 <%= link_to 'Sort By Due Date', list_tasks_path(@tasks.first.list, sort: 'due_date')%>
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Complete?</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-  <% @tasks.each do |task| %>
+
+<table class="table table-dark" id=list-table>
+  <thead>
     <tr>
-      <td class='task-name'><%= task.name %></td>
-      <td><%= task.complete %></td>
-      <% if task.due_date %>
-        <td><%= task.due_date.strftime('%F') %></td>
-      <% end %>
-      <td><%= link_to 'Show', list_task_path(@list, task) %></td>
-      <td><%= link_to 'Edit', edit_list_task_path(@list, task) %></td>
-      <td><%= link_to 'Destroy', list_task_path(@list, task), method: :delete, confirm: 'Are you sure?' %></td>
+      <th scope="col">Name</th>
+      <th scope="col">Completed</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
     </tr>
-  <% end %>
+  </thead>
+<% @tasks.each do |task| %>
+    <tbody>
+      <tr>
+        <th scope="row"><%= task.name %></th>
+        <th scope="row"><%= task.complete %></th>
+        <% if task.due_date %>
+          <td><%= task.due_date.strftime('%F') %></td>
+        <% end %>
+        <td><%= link_to 'Show', list_task_path(task.list, task), class: 'list-table-data' %></td>
+        <td><%= link_to 'Edit', edit_list_path(task), class: 'list-table-data'  %></td>
+        <td><%= link_to 'Destroy', list_task_path(task.list, task), method: :delete, data: { confirm: 'Are you sure?' }, class: 'list-table-data'  %></td>
+      </tr>
+    </tbody>
+<% end %>
 </table>
 
 <br />

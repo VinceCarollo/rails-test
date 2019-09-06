@@ -10,11 +10,11 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
+  <div class="field form-group">
+    <%= f.label :title, class: 'form-label' %><br />
+    <%= f.text_field :title, class: 'form-control' %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Submit List", class: 'btn btn-dark' , id: 'edit-list-btn'%>
   </div>
 <% end %>
