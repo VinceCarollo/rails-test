@@ -8,7 +8,7 @@ describe 'As a user' do
       fill_in :task_name, with: 'Groceries'
       fill_in :task_due_date, with: '01/01/2020'
 
-      click_button "Create Task"
+      click_button "Submit Task"
 
       task = Task.last
 
@@ -25,7 +25,7 @@ describe 'As a user' do
       fill_in :task_name, with: 'Groceries'
       fill_in :task_due_date, with: '01/01/2020'
 
-      click_button "Update Task"
+      click_button "Submit Task"
 
       task = Task.last
 

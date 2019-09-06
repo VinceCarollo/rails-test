@@ -14,7 +14,7 @@
 <% @tasks.each do |task| %>
     <tbody>
       <tr>
-        <th scope="row"><%= task.name %></th>
+        <th scope="row" class='task-name'><%= task.name %></th>
         <th scope="row"><%= task.complete %></th>
         <% if task.due_date %>
           <td><%= task.due_date.strftime('%F') %></td>
