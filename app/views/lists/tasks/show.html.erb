@@ -1,5 +1,20 @@
 <p id="notice"><%= notice %></p>
 
+<br>
+
+<div class="card" style="width: 30rem;">
+  <div class="card-header" id="task-name">
+    <%= @task.name %>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Completed: <%= @task.complete %></li>
+    <% if @task.due_date %>
+      <li class="list-group-item">Due Date: <%= @task.due_date.strftime('%A %B %e, %Y') %></li>
+    <% end %>
+  </ul>
+</div>
+
+<br>
 
 <%= link_to 'Edit', edit_list_task_path(@list, @task) %> |
 <%= link_to 'Back', list_tasks_path(@list) %>

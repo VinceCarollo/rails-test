@@ -26,6 +26,10 @@ a {
   font-size: 20px;
 }
 
+p {
+  font-size: 18px;
+}
+
 .list-table-data {
   color: #3E92CC;
 }
@@ -38,11 +42,15 @@ a {
   font-size: 15px;
 }
 
+.card ul li {
+  font-size: 15px;
+}
+
 #list-table {
   margin-top: 20px;
 }
 
-#list-title {
+#list-title, #task-name {
   font-size: 30px;
 }
 

@@ -4,9 +4,9 @@
 <table class="table table-dark" id=list-table>
   <thead>
     <tr>
-      <th scope="col">Name</th>
-      <th scope="col">Completed</th>
-      <th scope="col"></th>
+      <th scope="col" class='text-center'>Name</th>
+      <th scope="col" class='text-center'>Completed</th>
+      <th scope="col" class='text-center'>Due Date</th>
       <th scope="col"></th>
       <th scope="col"></th>
     </tr>
@@ -14,13 +14,15 @@
 <% @tasks.each do |task| %>
     <tbody>
       <tr>
-        <th scope="row" class='task-name'><%= task.name %></th>
-        <th scope="row"><%= task.complete %></th>
+        <td scope="row" class='task-name'><%= task.name %></td>
+        <td scope="row"><%= task.complete %></td>
         <% if task.due_date %>
           <td><%= task.due_date.strftime('%F') %></td>
+        <% else %>
+          <td></td>
         <% end %>
         <td><%= link_to 'Show', list_task_path(task.list, task), class: 'list-table-data' %></td>
-        <td><%= link_to 'Edit', edit_list_path(task), class: 'list-table-data'  %></td>
+        <td><%= link_to 'Edit', edit_list_task_path(@list, task), class: 'list-table-data'  %></td>
         <td><%= link_to 'Destroy', list_task_path(task.list, task), method: :delete, data: { confirm: 'Are you sure?' }, class: 'list-table-data'  %></td>
       </tr>
     </tbody>
@@ -29,6 +31,5 @@
 
 <br />
 
-<%= link_to 'Back', lists_path %><br>
-
 <%= button_to 'New Task', new_list_task_path(@list), method: :get, class: "btn btn-dark", id: 'list-btn'%>
+<%= link_to 'Back', lists_path %><br>
