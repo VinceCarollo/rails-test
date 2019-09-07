@@ -13,3 +13,55 @@
  *= require_self
  */
 
+table tr th {
+  font-size: 30px;
+}
+
+tbody tr td {
+  font-size: 25px;
+  text-align: center;
+}
+
+a {
+  font-size: 20px;
+}
+
+p {
+  font-size: 18px;
+}
+
+.list-table-data {
+  color: #3E92CC;
+}
+
+.form-group {
+  width: 300px;
+}
+
+.form-label {
+  font-size: 15px;
+}
+
+.card ul li {
+  font-size: 15px;
+}
+
+#list-table {
+  margin-top: 20px;
+}
+
+#list-title, #task-name {
+  font-size: 30px;
+}
+
+#list-btn {
+  height: 40px;
+  width: 200px;
+  font-size: 20px;
+  color: #3E92CC;
+}
+
+.list-table-data:hover {
+  color: white;
+  text-decoration: none;
+}

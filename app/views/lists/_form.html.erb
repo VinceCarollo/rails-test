@@ -10,11 +10,15 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
+  <div class="field form-group">
+    <%= f.label :title, class: 'form-label' %><br />
+    <%= f.text_field :title, class: 'form-control' %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <% if @list.id %>
+      <%= f.submit "Update List", class: 'btn btn-dark' , id: 'list-btn'%>
+    <% else %>
+      <%= f.submit "Create List", class: 'btn btn-dark' , id: 'list-btn'%>
+    <% end %>
   </div>
 <% end %>
