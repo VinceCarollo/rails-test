@@ -22,6 +22,10 @@ tbody tr td {
   text-align: center;
 }
 
+a {
+  font-size: 20px;
+}
+
 .list-table-data {
   color: #3E92CC;
 }
@@ -38,7 +42,11 @@ tbody tr td {
   margin-top: 20px;
 }
 
-#new-list-btn, #edit-list-btn {
+#list-title {
+  font-size: 30px;
+}
+
+#list-btn {
   height: 40px;
   width: 200px;
   font-size: 20px;

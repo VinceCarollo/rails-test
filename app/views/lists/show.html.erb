@@ -1,11 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Title:</b>
+<p id='list-title'>
   <%= @list.title %>
 </p>
 
-<%= link_to 'Tasks', list_tasks_path(@list) %> |
-
 <%= link_to 'Edit', edit_list_path(@list) %> |
-<%= link_to 'Back', lists_path %>
+<%= link_to 'Back', lists_path %><br>
+<%= button_to 'View Tasks', list_tasks_path(@list), method: :get, class: 'btn btn-dark' , id: 'list-btn' %><br>

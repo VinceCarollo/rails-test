@@ -15,6 +15,10 @@
     <%= f.text_field :title, class: 'form-control' %>
   </div>
   <div class="actions">
-    <%= f.submit "Submit List", class: 'btn btn-dark' , id: 'edit-list-btn'%>
+    <% if @list.id %>
+      <%= f.submit "Update List", class: 'btn btn-dark' , id: 'list-btn'%>
+    <% else %>
+      <%= f.submit "Create List", class: 'btn btn-dark' , id: 'list-btn'%>
+    <% end %>
   </div>
 <% end %>

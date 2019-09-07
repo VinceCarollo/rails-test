@@ -1,4 +1,4 @@
-<h1>List Tasks</h1>
+<h1><%= @list.title %> Tasks</h1>
 <%= link_to 'Sort By Due Date', list_tasks_path(@tasks.first.list, sort: 'due_date')%>
 
 <table class="table table-dark" id=list-table>
@@ -29,5 +29,6 @@
 
 <br />
 
-<%= link_to 'Back', lists_path %> |
-<%= link_to 'New Task', new_list_task_path(@list) %>
+<%= link_to 'Back', lists_path %><br>
+
+<%= button_to 'New Task', new_list_task_path(@list), method: :get, class: "btn btn-dark", id: 'list-btn'%>

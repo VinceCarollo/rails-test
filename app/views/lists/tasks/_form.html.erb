@@ -23,6 +23,10 @@
     <%= f.check_box :complete %>
   </div>
   <div class="actions">
-    <%= f.submit "Submit Task", class: 'btn btn-dark' , id: 'edit-list-btn'%>
+    <% if @task.id %>
+      <%= f.submit "Update Task", class: 'btn btn-dark' , id: 'list-btn'%>
+    <% else %>
+      <%= f.submit "Create Task", class: 'btn btn-dark' , id: 'list-btn'%>
+    <% end %>
   </div>
 <% end %>
